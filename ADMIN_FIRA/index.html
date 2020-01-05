@@ -1,20 +1,36 @@
 <html>
 <head>
-  <title>Login FIRA Admin</title>
+  <title>LOGIN Admin FIRA</title>
   <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" type="jpeg" href="img/logo1.jpeg">
 </head>
 <body>
-
+<style>
+body {
+  background-image: url('img/bg1.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+}
+</style>
   <div id="login_div" class="main-div">
-    <h3>Firebase Web login Example</h3>
+    <center><img src="../img/logo.jpg" width="100px" height="70px"></center>
+    <h3>LOGIN ADMIN</h3>
     <input type="email" placeholder="Email..." id="email_field" />
     <input type="password" placeholder="Password..." id="password_field" />
 
     <button onclick="login()">Login to Account</button>
   </div>
 
- 
+  <div id="user_div" class="loggedin-div">
+    <h3>Welcome User</h3>
+    <p id="user_para">Welcome to Firebase web login Example. You're currently logged in.</p>
+    <button onclick="logout()">Logout</button>
+  </div>
+
+
+
   <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
   <script>
     // Initialize Firebase
